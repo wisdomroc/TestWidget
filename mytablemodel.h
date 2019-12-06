@@ -4,6 +4,8 @@
 #include <QObject>
 #include <QAbstractTableModel>
 
+const int MyTableModelColumnCount = 3;
+
 class MyTableModel : public QAbstractTableModel
 {
     Q_OBJECT
@@ -16,6 +18,7 @@ class MyTableModel : public QAbstractTableModel
 
 public:
     MyTableModel();
+    void insertData(const QString &name, int value, const QString &detailInfo);
 
 protected:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
