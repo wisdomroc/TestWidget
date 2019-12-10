@@ -4,7 +4,7 @@
 #include <QObject>
 #include <QAbstractTableModel>
 
-const int MyTableModelColumnCount = 3;
+const int MyTableModelColumnCount = 5;
 
 class MyTableModel : public QAbstractTableModel
 {
@@ -13,12 +13,14 @@ class MyTableModel : public QAbstractTableModel
     struct CepriInfo {
         QString name;
         int value;
+        bool state;
+        int progress;
         QString detailInfo;
     };
 
 public:
     MyTableModel();
-    void insertData(const QString &name, int value, const QString &detailInfo);
+    void insertData(const QString &name, int value, bool state, int progress, const QString &detailInfo);
 
 protected:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;

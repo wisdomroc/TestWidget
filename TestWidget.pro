@@ -27,11 +27,13 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         widget.cpp \
-    mytablemodel.cpp
+    mytablemodel.cpp \
+    progressdelegate.cpp
 
 HEADERS += \
         widget.h \
-    mytablemodel.h
+    mytablemodel.h \
+    progressdelegate.h
 
 FORMS += \
         widget.ui
